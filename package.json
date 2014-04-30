@@ -1,0 +1,18 @@
+{
+    "author": "Jiang <jianghai1007@gmail.com> (jianghai.github.io)",
+    "name": "vjs",
+    "description": "A javascript template engine",
+    "version": "1.0.0",
+    "main": "./vjs.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jianghai/vjs"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "dependencies": {
+        "grunt": "~0.4.2",
+        "grunt-contrib-uglify": "~0.2.2"
+    }
+}
