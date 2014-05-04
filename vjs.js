@@ -8,14 +8,15 @@ see: http://github.com/jianghai/vjs for details
     
 
     /**
-     * Key step, convert template string to html by data you passed
+     * Key step, convert template string to javascript code, return a function which
+     * has a parameter data and return html string.
      */
-    var vjs = function(str, data) {
+    var vjs = function(str) {
         str = "var out = '" + str.replace(/\s*\n\s*/g, '') + "'";
         str = str.replace(/<%\s([\s\S]+?)%>/g, "';$1out+='");
         str = str.replace(/<%-\s([\s\S]+?)%>/g, "'+$1+'");
         str += ";return out;";
-        return (new Function(template.global, str))(data);
+        return new Function(vjs.global, str);
     };
 
 
