@@ -2,7 +2,7 @@
     "author": "Jiang <jianghai1007@gmail.com> (jianghai.github.io)",
     "name": "vjs",
     "description": "A javascript template engine",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "./vjs.js",
     "repository": {
         "type": "git",

@@ -1,6 +1,6 @@
 vjs is a javascript template engine for nodejs or the browser.
 
-### Use in browser
+### In the browser
 
 html
 ```html
@@ -37,14 +37,14 @@ javascript
 })();
 ```
 
-### Use in nodejs
+### In the nodejs
 
 ```
 npm install vjs
 ```
 
 ```js
-var vjs  = require('./vjs');
+var vjs  = require('vjs');
 // Same logic as browser
 ```
 
