@@ -12,6 +12,7 @@ see: http://github.com/jianghai/vjs for details
      * has a parameter data and return html string.
      */
     var vjs = function(str) {
+        if (!str) return;
         str = "var out = '" + str.replace(/\s*\n\s*/g, '') + "'";
         str = str.replace(/<%\s([\s\S]+?)%>/g, "';$1out+='");
         str = str.replace(/<%-\s([\s\S]+?)%>/g, "'+$1+'");
@@ -29,17 +30,17 @@ see: http://github.com/jianghai/vjs for details
     /**
      * Environment check
      */
-    if (typeof module !== 'undefined' && module.exports) {
-        // Nodejs
-        module.exports = vjs;
-    } else if (typeof define === 'function' && define.amd) {
-        // AMD module
-        define(function() {
-            return vjs;
-        });
-    } else {
-        this.vjs = vjs;
-    }
-    
+    // if (typeof module !== 'undefined' && module.exports) {
+    //     // Nodejs
+    //     module.exports = vjs;
+    // } else if (typeof define === 'function' && define.amd) {
+    //     // AMD module
+    //     define(function() {
+    //         return vjs;
+    //     });
+    // } else {
+    //     this.vjs = vjs;
+    // }
+    this.vjs = vjs;
 
 }).call(this);
