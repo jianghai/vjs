@@ -30,17 +30,20 @@ see: http://github.com/jianghai/vjs for details
     /**
      * Environment check
      */
-    // if (typeof module !== 'undefined' && module.exports) {
-    //     // Nodejs
-    //     module.exports = vjs;
-    // } else if (typeof define === 'function' && define.amd) {
-    //     // AMD module
-    //     define(function() {
-    //         return vjs;
-    //     });
-    // } else {
-    //     this.vjs = vjs;
-    // }
+    if (typeof module !== 'undefined' && module.exports) {
+        
+        // Nodejs
+        module.exports = vjs;
+
+    } else if (typeof define === 'function' && define.amd) {
+        
+        // AMD module
+        define('vjs', [], function() {
+            return vjs;
+        });
+
+    }
+    
     this.vjs = vjs;
 
 }).call(this);
